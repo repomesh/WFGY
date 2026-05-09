@@ -8,6 +8,8 @@
 
 語言版本：[English](./README.md) | [繁體中文](./README.zh-TW.md)
 
+<img width="1672" height="941" alt="hero" src="https://github.com/user-attachments/assets/df9c72de-a7e7-407b-9a16-999d3899b4cc" />
+
 [![Protocol](https://img.shields.io/badge/type-human--AI_protocol-blue)](#這是什麼)
 [![Format](https://img.shields.io/badge/format-portable_TXT-green)](./POLARIS_GOAL_COMPILER.txt)
 [![Use](https://img.shields.io/badge/use-60_second_trial-orange)](#60-秒體驗)
