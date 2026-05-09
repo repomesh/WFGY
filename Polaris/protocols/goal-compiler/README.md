@@ -1,3 +1,4 @@
+
 <a id="top"></a>
 
 # Polaris Goal Compiler
@@ -5,7 +6,7 @@
 > **A human AI communication protocol under WFGY 5.0 Polaris Protocol.**  
 > Compile first. Execute one active atom. Verify before unlock. Claim only what is supported.
 
-<img width="1672" height="941" alt="polaris_goal_compiler" src="https://github.com/user-attachments/assets/3c9dab1a-c9b5-40f5-a10a-0b6b32462a66" />
+<img width="1672" height="941" alt="polaris_goal_compiler" src="https://github.com/user-attachments/assets/3cda3157-de11-405e-a92a-ed28b630f19f" />
 
 [![Protocol](https://img.shields.io/badge/type-human--AI_protocol-blue)](#what-this-is)
 [![Format](https://img.shields.io/badge/format-portable_TXT-green)](./POLARIS_GOAL_COMPILER.txt)
