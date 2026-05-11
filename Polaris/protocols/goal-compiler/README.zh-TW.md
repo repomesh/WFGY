@@ -41,11 +41,38 @@
 |---|---|
 | 下載協議 TXT | [`POLARIS_GOAL_COMPILER.txt`](./POLARIS_GOAL_COMPILER.txt) |
 | 60 秒快速體驗 | [60 秒體驗](#60-秒體驗) |
+| 查看目前相容性 | [目前相容性](#目前相容性) |
 | 看它解決什麼問題 | [為什麼需要它](#為什麼需要它) |
 | 看它為什麼有效 | [為什麼它有效](#為什麼它有效) |
 | 看完整能力地圖 | [能力地圖](#能力地圖) |
 | 閱讀 FAQ | [快速 FAQ](#快速-faq) 與 [深度 FAQ](#深度-faq) |
 | 回到 Polaris 主頁 | [WFGY 5.0 Polaris Protocol](../../README.md) |
+
+---
+
+<a id="目前相容性"></a>
+
+## 目前相容性
+
+本次 teaser release 目前僅正式驗證 **ChatGPT 使用情境**。
+
+Polaris Goal Compiler 是以可攜式 TXT protocol 的形式撰寫，這表示它的結構設計目標是未來可以被複製、閱讀、改寫、封裝到不同 AI 環境中。
+
+但「可攜式設計」不等於「所有平台都已正式驗證」。
+
+| 環境 | 目前 teaser 狀態 |
+|---|---|
+| ChatGPT 聊天視窗 | 本次 teaser 支援 |
+| ChatGPT 自訂指令 | 本次 teaser 支援 |
+| ChatGPT 專案指令 | 本次 teaser 支援 |
+| 其他 AI 助手 | 尚未正式驗證 |
+| Coding agent 與 IDE rule layer | 設計方向，本次 teaser 尚未驗證 |
+| Agent workflow runner | 設計方向，本次 teaser 尚未驗證 |
+| 未來 skill system | 規劃方向，不是目前支援宣稱 |
+
+如果你在 ChatGPT 以外的環境測試 Polaris Goal Compiler，請把結果視為實驗性結果，而不是本次 teaser release 的官方相容性宣稱。
+
+[回到頂部](#top)
 
 ---
 
@@ -100,19 +127,23 @@ Polaris Goal Compiler 改變的是起點。
 
 ### Step 2
 
-把它貼到以下任一位置：
+本次 teaser release 請先使用 **ChatGPT** 測試。
+
+建議位置：
 
 | 位置 | 用法 |
 |---|---|
-| 一般 AI 聊天 | 快速手動測試 |
-| Custom instructions | 讓助手長期採用這套行為 |
-| Project rules | 用在 coding assistant 或 repo 層級工作 |
-| Agent rule layer | 用在多步驟 agent 工作流 |
-| Future skill file | 未來可包成 skill runtime |
+| ChatGPT 聊天視窗 | 快速手動測試 |
+| ChatGPT 自訂指令 | 讓助手較長期採用這套行為 |
+| ChatGPT 專案指令 | 用在 ChatGPT 專案層級工作 |
+
+請不要把其他 AI 助手、coding agent、IDE rule layer、workflow runner、future skill file 視為本次 teaser release 的正式支援目標。
+
+那些是後續設計方向，不是目前相容性宣稱。
 
 ### Step 3
 
-對 AI 說：
+對 ChatGPT 說：
 
 ```text
 Use Polaris Goal Compiler.
@@ -120,7 +151,7 @@ Use Polaris Goal Compiler.
 First compile my request into task atoms.
 Then execute only the active atom.
 Do not claim final completion until verification is shown.
-````
+```
 
 ### Step 4
 
@@ -137,7 +168,7 @@ Only execute the first active atom.
 
 ### 你應該看到什麼
 
-AI 不應該直接跳去寫 release note。
+ChatGPT 不應該直接跳去寫 release note。
 
 它應該先把工作拆開。
 
@@ -176,6 +207,19 @@ A06 Write release note
 </details>
 
 <details>
+<summary>目前可以在 ChatGPT 以外使用嗎？</summary>
+
+> 目前不作為正式支援宣稱。
+>
+> 本次 teaser release 目前只正式驗證 ChatGPT 使用情境。
+>
+> Polaris Goal Compiler 的設計形式是可攜式 TXT protocol，所以未來可以探索其他 AI 助手、coding agent、IDE rule layer、workflow runner 或 skill system。
+>
+> 但在本次 teaser release 中，這些都屬於後續設計方向，不是官方相容性保證。
+
+</details>
+
+<details>
 <summary>為什麼一個 TXT 檔會改變 AI 行為？</summary>
 
 > AI 很擅長模仿與延續格式。
@@ -203,6 +247,8 @@ A06 Write release note
 > 當任務很複雜、多步驟、高風險，或很容易被 AI 假裝完成時，就適合使用。
 >
 > 例如 coding repair、檔案審查、audit、文件打包、release preparation、repo maintenance、長任務規劃。
+>
+> 本次 teaser release 建議先在 ChatGPT 使用。
 >
 > 如果只是一般輕鬆聊天，協議可以用 compact mode，甚至不一定需要啟動完整結構。
 
@@ -233,15 +279,18 @@ Polaris Goal Compiler 是 **WFGY 5.0 Polaris Protocol** 底下的一個公開 pr
 
 它不公開完整的 private mathematical engine。
 
-它先釋出一個實用的人機執行層，讓使用者可以直接下載、貼上、測試。
+它先釋出一個實用的人機執行層，讓使用者可以直接下載、貼上，並在 ChatGPT 中測試。
 
-| 層級                             | 狀態                          |
-| ------------------------------ | --------------------------- |
-| 人機執行協議                         | 透過 Polaris Goal Compiler 公開 |
-| 可攜式 TXT 規則                     | 已公開                         |
-| 未來 skill 相容性                   | 已在結構中預留                     |
-| 完整 WFGY 5.0 內部引擎               | 本頁未完整公開                     |
-| 未來 Polaris protocol components | 將逐步釋出                       |
+| 層級 | 狀態 |
+|---|---|
+| 人機執行協議 | 透過 Polaris Goal Compiler 公開 |
+| ChatGPT teaser 相容性 | 本次 teaser 支援 |
+| 可攜式 TXT 規則 | 已公開 |
+| 其他 AI 助手 | 尚未正式驗證 |
+| Coding agent 與 IDE rule layer 相容性 | 設計方向，本次 teaser 尚未驗證 |
+| 未來 skill 相容性 | 結構中有預留，但不是目前支援宣稱 |
+| 完整 WFGY 5.0 內部引擎 | 本頁未完整公開 |
+| 未來 Polaris protocol components | 將逐步釋出 |
 
 這次釋出遵循 Polaris 的方向：
 
@@ -281,13 +330,13 @@ review + repair + verify + explain + publish
 
 這就是假完成的開始。
 
-| 失敗類型                      | 會發生什麼             |
-| ------------------------- | ----------------- |
-| Goal merging              | 多個任務變成一團模糊任務      |
-| Verification skipping     | AI 寫得像已經檢查過，但其實沒有 |
-| Premature prose           | 真實工作還沒完成，公開說明先出現  |
-| Local to global promotion | 局部完成被說成整體完成       |
-| Unsupported readiness     | 沒有證據就宣稱完成         |
+| 失敗類型 | 會發生什麼 |
+|---|---|
+| Goal merging | 多個任務變成一團模糊任務 |
+| Verification skipping | AI 寫得像已經檢查過，但其實沒有 |
+| Premature prose | 真實工作還沒完成，公開說明先出現 |
+| Local to global promotion | 局部完成被說成整體完成 |
+| Unsupported readiness | 沒有證據就宣稱完成 |
 
 Polaris Goal Compiler 的目的，就是阻止這個第一步塌縮。
 
@@ -323,14 +372,14 @@ What remains unresolved?
 
 它會告訴 AI：
 
-| 訊號                | 效果             |
-| ----------------- | -------------- |
-| Active atom       | 現在做這個          |
-| Blocked atom      | 這個還不能做         |
-| Verification gate | 先檢查，再解鎖        |
-| Truth object      | 不要把漂亮文字誤當完成    |
-| Claim ceiling     | 不要誇大 readiness |
-| Closure record    | 保留長任務的連續性      |
+| 訊號 | 效果 |
+|---|---|
+| Active atom | 現在做這個 |
+| Blocked atom | 這個還不能做 |
+| Verification gate | 先檢查，再解鎖 |
+| Truth object | 不要把漂亮文字誤當完成 |
+| Claim ceiling | 不要誇大 readiness |
+| Closure record | 保留長任務的連續性 |
 
 白話說：
 
@@ -350,26 +399,28 @@ What remains unresolved?
 
 Polaris Goal Compiler 由多層執行控制組成。
 
-| 能力                    | 它做什麼                          | 它防止什麼              |
-| --------------------- | ----------------------------- | ------------------ |
-| Goal Compilation      | 把原始自然語言轉成可執行任務結構              | 從模糊請求直接開始          |
-| Task Graph            | 標記 atoms、依賴、阻擋邊、解鎖順序          | 太早跳到下游工作           |
-| Count Board           | 分離任務數、package 數、active atom 數 | 把一個局部單位誤當整個任務      |
-| Atom Table            | 把每個任務記錄成可見可執行單位               | 把修補、驗證、寫作混在一步      |
-| Execution Token Board | 對每個 atom 授權或拒絕執行              | 執行尚未解鎖的工作          |
-| Round Lock            | 每一輪鎖定一個 active atom           | 一個答案裡多任務漂移         |
-| Truth Object          | 定義真正必須變成真的東西                  | 把可讀文字當成證明          |
-| Claim Ceiling         | 限制 AI 能宣稱的完成強度                | 局部成功變成假全局完成        |
-| Downstream Leak Audit | 偵測後段內容是否太早滲出                  | 驗證前就寫 announcement |
-| Closure Record        | 記錄驗證狀態、缺口、剩餘 gap              | 長任務中途失去狀態          |
-| Portable TXT Mode     | 不需要特殊 app 也能使用                | 被鎖死在單一介面           |
-| Skill Compatibility   | 為未來 skill 包裝預留結構              | 讓 protocol 變成死文件   |
+| 能力 | 它做什麼 | 它防止什麼 |
+|---|---|---|
+| Goal Compilation | 把原始自然語言轉成可執行任務結構 | 從模糊請求直接開始 |
+| Task Graph | 標記 atoms、依賴、阻擋邊、解鎖順序 | 太早跳到下游工作 |
+| Count Board | 分離任務數、package 數、active atom 數 | 把一個局部單位誤當整個任務 |
+| Atom Table | 把每個任務記錄成可見可執行單位 | 把修補、驗證、寫作混在一步 |
+| Execution Token Board | 對每個 atom 授權或拒絕執行 | 執行尚未解鎖的工作 |
+| Round Lock | 每一輪鎖定一個 active atom | 一個答案裡多任務漂移 |
+| Truth Object | 定義真正必須變成真的東西 | 把可讀文字當成證明 |
+| Claim Ceiling | 限制 AI 能宣稱的完成強度 | 局部成功變成假全局完成 |
+| Downstream Leak Audit | 偵測後段內容是否太早滲出 | 驗證前就寫 announcement |
+| Closure Record | 記錄驗證狀態、缺口、剩餘 gap | 長任務中途失去狀態 |
+| Portable TXT Mode | 以 TXT 形式公開，方便未來移植 | 被鎖死在單一介面 |
+| Future Skill Direction | 為未來 skill 包裝預留結構 | 讓 protocol 變成死文件 |
 
 這套協議是為了讓複雜任務更可檢查。
 
 它不只是叫 AI 小心一點。
 
 它給 AI 一個結構，讓 AI 知道「小心」到底是什麼意思。
+
+注意：本次 teaser release 的正式使用情境仍以 ChatGPT 為準。其他環境屬於後續設計方向。
 
 [回到頂部](#top)
 
@@ -428,23 +479,25 @@ Only execute the first active atom.
 
 它應該先產生類似這樣的結構：
 
-| Atom | Class              | State   |
-| ---- | ------------------ | ------- |
-| A01  | Define target      | Active  |
-| A02  | Locate risky parts | Blocked |
-| A03  | Repair structure   | Blocked |
-| A04  | Verify repair      | Blocked |
-| A05  | Explain changes    | Blocked |
-| A06  | Write release note | Blocked |
+| Atom | Class | State |
+|---|---|---|
+| A01 | Define target | Active |
+| A02 | Locate risky parts | Blocked |
+| A03 | Repair structure | Blocked |
+| A04 | Verify repair | Blocked |
+| A05 | Explain changes | Blocked |
+| A06 | Write release note | Blocked |
 
 格式可以不同。
 
 但核心行為不應該不同：
 
-> 先編譯。
-> 只執行一個 active atom。
-> 先驗證，再解鎖。
+> 先編譯。  
+> 只執行一個 active atom。  
+> 先驗證，再解鎖。  
 > 不要太早宣稱最終完成。
+
+本次 teaser release 建議在 ChatGPT 中進行這個測試。
 
 [回到頂部](#top)
 
@@ -452,31 +505,31 @@ Only execute the first active atom.
 
 <a id="where-to-use-it"></a>
 
-## 可以用在哪裡
+## 目前可以用在哪裡
 
-你可以在很多 AI 工作流中使用 Polaris Goal Compiler。
+本次 teaser release 建議先在 **ChatGPT** 使用 Polaris Goal Compiler。
 
-| 環境                      | 用法                                              |
-| ----------------------- | ----------------------------------------------- |
-| 一般 AI 聊天                | 貼上 TXT，請 AI 使用                                  |
-| Custom instructions     | 作為長期 instruction layer                          |
-| Coding assistant rules  | 放在 project rules 或 repo 層級規則                    |
-| Agent workflows         | 作為任務治理 policy                                   |
-| Documentation workflows | 用在 release notes、README、文件打包前                   |
-| Audit workflows         | 用來分離 locate、verify、decide、write 階段              |
-| Future skill systems    | 包成 functions、panels、logs 或 hidden runtime state |
+| 環境 | 如何使用 | 狀態 |
+|---|---|---|
+| ChatGPT 聊天視窗 | 貼上 TXT，請 ChatGPT 使用 | 本次 teaser 支援 |
+| ChatGPT 自訂指令 | 作為較長期 instruction layer | 本次 teaser 支援 |
+| ChatGPT 專案指令 | 用在 ChatGPT 專案層級工作 | 本次 teaser 支援 |
+| 其他 AI 助手 | 可自行實驗 | 尚未正式驗證 |
+| Coding assistant rules | 後續設計方向 | 本次 teaser 尚未驗證 |
+| Agent workflows | 後續設計方向 | 本次 teaser 尚未驗證 |
+| Future skill systems | 後續包裝方向 | 不是目前支援宣稱 |
 
-最有感的場景：
+最有感的 ChatGPT 場景：
 
-| 場景                      | 為什麼有幫助                             |
-| ----------------------- | ---------------------------------- |
-| Coding repair           | 分離診斷、修補、驗證、解釋                      |
-| File review             | 防止還沒檢查就開始總結                        |
+| 場景 | 為什麼有幫助 |
+|---|---|
+| Coding repair | 分離診斷、修補、驗證、解釋 |
+| File review | 防止還沒檢查就開始總結 |
 | Documentation packaging | 把 verified facts 和 public prose 分開 |
-| Release preparation     | 沒有檢查前阻擋 readiness claims           |
-| Long planning           | 維持多輪任務連續性                          |
-| Repository maintenance  | 防止修補、驗證、release notes 混成一團         |
-| Multi round work        | 讓未完成工作可見，不被漂亮文字埋掉                  |
+| Release preparation | 沒有檢查前阻擋 readiness claims |
+| Long planning | 維持多輪任務連續性 |
+| Repository maintenance | 防止修補、驗證、release notes 混成一團 |
+| Multi round work | 讓未完成工作可見，不被漂亮文字埋掉 |
 
 [回到頂部](#top)
 
@@ -502,13 +555,13 @@ Only execute the first active atom.
 
 建議圖表維度：
 
-| 維度                            | 意義              |
-| ----------------------------- | --------------- |
-| Boundary clarity              | 任務是否在執行前被切清楚    |
-| Fake completion risk          | 局部進度是否太早被宣稱為完成  |
-| Verification visibility       | 檢查是否可見，或其實缺失    |
-| Claim ceiling control         | AI 是否避免無證據宣稱    |
-| Long task continuity          | 任務是否能跨回合追蹤      |
+| 維度 | 意義 |
+|---|---|
+| Boundary clarity | 任務是否在執行前被切清楚 |
+| Fake completion risk | 局部進度是否太早被宣稱為完成 |
+| Verification visibility | 檢查是否可見，或其實缺失 |
+| Claim ceiling control | AI 是否避免無證據宣稱 |
+| Long task continuity | 任務是否能跨回合追蹤 |
 | Downstream leakage resistance | 下游工作是否被正確阻擋直到解鎖 |
 
 第一張公開圖應該是 informal effect map，不是 formal benchmark claim。
@@ -521,22 +574,24 @@ Only execute the first active atom.
 
 ## 非正式效果地圖
 
-這張表是一般 AI 工作流中的實用預期指南。
+這張表是 ChatGPT 工作流中的實用預期指南。
 
 這不是正式 benchmark 結果。
 
-| 使用場景                         | 預期影響           | 原因                                                  |
-| ---------------------------- | -------------- | --------------------------------------------------- |
-| Casual chat                  | Low            | 簡單聊天通常不需要重型任務編譯                                     |
-| Simple writing               | Low to medium  | 可幫助保持 claim boundary                                |
-| Multi step writing           | Medium         | 分離規劃、草稿、審查、最終輸出                                     |
-| Coding repair                | Medium to high | 防止 patch、explanation、verification 混在一起              |
-| Audit and review             | High           | 強制顯示 active checks、blocked items、closure records    |
-| Long task packaging          | High           | 防止局部完成被升級成最終完成                                      |
-| Repository maintenance       | High           | 分離 repair、verification、documentation、release claims |
-| Multi round complex planning | High           | 維持多輪任務連續性                                           |
+| 使用場景 | 預期影響 | 原因 |
+|---|---|---|
+| Casual chat | Low | 簡單聊天通常不需要重型任務編譯 |
+| Simple writing | Low to medium | 可幫助保持 claim boundary |
+| Multi step writing | Medium | 分離規劃、草稿、審查、最終輸出 |
+| Coding repair | Medium to high | 防止 patch、explanation、verification 混在一起 |
+| Audit and review | High | 強制顯示 active checks、blocked items、closure records |
+| Long task packaging | High | 防止局部完成被升級成最終完成 |
+| Repository maintenance | High | 分離 repair、verification、documentation、release claims |
+| Multi round complex planning | High | 維持多輪任務連續性 |
 
 未來可以用 controlled tasks、baseline comparisons、repeated trials、clear scoring rules 加入正式測量。
+
+注意：這張表描述的是本次 ChatGPT teaser 使用時的預期效果，不是跨所有 AI 平台的正式 benchmark claim。
 
 [回到頂部](#top)
 
@@ -582,6 +637,19 @@ Only execute the first active atom.
 > AI 必須先把它編譯成可見的 task atoms、dependency edges、blocked work、verification states、claim limits。
 >
 > 這讓雙方都更容易檢查任務狀態。
+
+</details>
+
+<details>
+<summary>為什麼說目前僅 ChatGPT，如果它又是可攜式 TXT protocol？</summary>
+
+> 因為「可攜式設計」與「正式驗證相容性」是兩種不同宣稱。
+>
+> Polaris Goal Compiler 被寫成 TXT protocol，代表它的結構可以被複製、閱讀、改寫，未來也可以被探索到不同 AI 環境中。
+>
+> 但本次 teaser release 目前只正式宣稱 ChatGPT 使用情境。
+>
+> 其他 AI 助手、coding agent、IDE rule layer、workflow runner、future skill system，都應該先視為實驗性方向，直到未來另外測試與文件化。
 
 </details>
 
@@ -657,18 +725,20 @@ Only execute the first active atom.
 >
 > 它不公開完整 private mathematical engine。
 >
-> 它先釋出一個實用的人機執行層，讓使用者可以下載、貼上、立即測試。
+> 它先釋出一個實用的人機執行層，讓使用者可以下載、貼上，並在 ChatGPT 中測試。
 
 </details>
 
 <details>
 <summary>這未來可以變成 AI skill 嗎？</summary>
 
-> 可以。
+> 可以，這是後續設計方向之一。
 >
 > TXT 版本刻意設計成可攜式。
 >
 > 未來 skill 可以把同樣結構包成 functions、panels、logs、hidden state、forms 或 runtime checks。
+>
+> 但本次 teaser release 不把 future skill system 列為正式支援目標。
 >
 > 實作方式可以改變，但核心結構應該保留：goal compilation、task graph、atom table、execution token board、round lock、downstream leak audit、closure record、claim ceiling control。
 
@@ -677,11 +747,13 @@ Only execute the first active atom.
 <details>
 <summary>可以用在 coding agents 嗎？</summary>
 
-> 可以。
+> 這是後續設計方向，但不是本次 teaser release 的正式支援宣稱。
 >
-> 當 coding task 同時混合 diagnosis、patching、verification、explanation、release notes 時，它特別有用。
+> Polaris Goal Compiler 的結構很適合處理 coding task 中常見的混合問題，例如 diagnosis、patching、verification、explanation、release notes 混在一起。
 >
-> Coding agent 可以用 Polaris Goal Compiler 分離哪些要 inspect、哪些要 change、哪些要 test，以及哪些還不能宣稱 fixed。
+> 但本次 teaser release 目前只正式驗證 ChatGPT 使用情境。
+>
+> 如果你把它放進 coding agent、IDE rule layer 或 agent workflow runner，請把結果視為實驗性結果，而不是官方相容性保證。
 
 </details>
 
@@ -694,6 +766,8 @@ Only execute the first active atom.
 >
 > 它不能取代真實測試、外部來源或專家審查。
 >
+> 它也不宣稱本次 teaser release 已經支援所有 AI 平台。
+>
 > 它比較實際的目標是：降低任務模糊、暴露 blocked work、防止 premature claims，並讓 fake completion 更容易被發現。
 
 </details>
@@ -705,7 +779,7 @@ Only execute the first active atom.
 >
 > 非正式效果地圖是一個實用預期指南。
 >
-> 它幫助使用者理解這個 protocol 可能在哪些場景最有感。
+> 它幫助使用者理解這個 protocol 在 ChatGPT 工作流中可能在哪些場景最有感。
 >
 > 正式 benchmark claims 需要 controlled tasks、baseline comparisons、repeated trials、clear scoring rules。
 
@@ -721,6 +795,8 @@ Only execute the first active atom.
 > 新功能應該讓執行更可見、更可驗證，或更難假裝完成。
 >
 > 只讓輸出變漂亮的功能是不夠的。
+>
+> 若要宣稱支援 ChatGPT 以外的平台，應該另外提供測試紀錄、限制說明與文件化的相容性邊界。
 
 </details>
 
@@ -736,29 +812,33 @@ Polaris Goal Compiler 是實用且有邊界的。
 
 它不宣稱：
 
-| 不宣稱                                | 原因                         |
-| ---------------------------------- | -------------------------- |
-| Universal correctness              | 沒有協議能保證所有答案都正確             |
-| Complete hallucination elimination | 目標是降低風險，不是神奇消除             |
-| Replacement for tests              | 真實驗證仍然重要                   |
-| Replacement for sources            | 事實性任務仍然需要證據                |
-| Replacement for expertise          | 領域判斷仍然重要                   |
-| Full WFGY 5.0 release              | 這只是一個公開 protocol component |
-| Formal benchmark proof             | 目前效果圖是 informal，正式測量需另外進行  |
+| 不宣稱 | 原因 |
+|---|---|
+| Universal correctness | 沒有協議能保證所有答案都正確 |
+| Complete hallucination elimination | 目標是降低風險，不是神奇消除 |
+| Replacement for tests | 真實驗證仍然重要 |
+| Replacement for sources | 事實性任務仍然需要證據 |
+| Replacement for expertise | 領域判斷仍然重要 |
+| Full WFGY 5.0 release | 這只是一個公開 protocol component |
+| Formal benchmark proof | 目前效果圖是 informal，正式測量需另外進行 |
+| Universal platform support | 本次 teaser release 目前僅正式驗證 ChatGPT 使用情境 |
+| Official coding agent support | Coding agent 與 IDE rule layer 是後續設計方向，不是目前支援宣稱 |
+| Official skill runtime support | Future skill system 是後續包裝方向，不是目前支援宣稱 |
 
 它宣稱的是：
 
-| 宣稱                                | 意義                            |
-| --------------------------------- | ----------------------------- |
-| Better task boundary visibility   | AI 必須顯示 active 與 blocked work |
-| Better fake completion resistance | 局部進度不能默默變成最終完成                |
-| Better verification awareness     | 缺少檢查時會變得可見                    |
-| Better claim control              | AI 不應該誇大 readiness            |
-| Better long task continuity       | 多輪任務狀態比較容易保留                  |
+| 宣稱 | 意義 |
+|---|---|
+| Better task boundary visibility | AI 必須顯示 active 與 blocked work |
+| Better fake completion resistance | 局部進度不能默默變成最終完成 |
+| Better verification awareness | 缺少檢查時會變得可見 |
+| Better claim control | AI 不應該誇大 readiness |
+| Better long task continuity | 多輪任務狀態比較容易保留 |
+| ChatGPT teaser compatibility | 本次 teaser release 正式支援 ChatGPT 使用情境 |
 
 一句話：
 
-> Polaris Goal Compiler 不會讓模型全知。它會讓任務介面更難假完成。
+> Polaris Goal Compiler 不會讓模型全知。它會讓 ChatGPT 任務介面更難假完成。
 
 [回到頂部](#top)
 
@@ -768,19 +848,22 @@ Polaris Goal Compiler 是實用且有邊界的。
 
 ## 檔案
 
-| 檔案                                                         | 用途                                          |
-| ---------------------------------------------------------- | ------------------------------------------- |
-| [`POLARIS_GOAL_COMPILER.txt`](./POLARIS_GOAL_COMPILER.txt) | 可攜式 TXT 協議。下載、貼上、直接使用。                      |
-| `README.md`                                                | 英文導讀、quickstart、FAQ、protocol explanation。   |
-| `README.zh-TW.md`                                          | 繁體中文導讀、quickstart、FAQ、protocol explanation。 |
+| 檔案 | 用途 |
+|---|---|
+| [`POLARIS_GOAL_COMPILER.txt`](./POLARIS_GOAL_COMPILER.txt) | 可攜式 TXT 協議。下載、貼上、直接使用。 |
+| `README.md` | 英文導讀、quickstart、FAQ、protocol explanation。 |
+| `README.zh-TW.md` | 繁體中文導讀、quickstart、FAQ、protocol explanation。 |
 
-建議使用方式：
+本次 teaser release 建議使用方式：
 
 ```text
 Download the TXT.
-Paste it into your AI assistant or agent rule layer.
-Ask the AI to use Polaris Goal Compiler before executing complex tasks.
+Paste it into ChatGPT.
+Ask ChatGPT to use Polaris Goal Compiler before executing complex tasks.
 ```
+
+其他 AI assistant、agent rule layer、IDE rule layer、workflow runner、future skill system 屬於後續設計方向。  
+本次 teaser release 目前不把這些環境列為正式支援目標。
 
 [回到頂部](#top)
 
@@ -796,13 +879,13 @@ Polaris Goal Compiler 是 WFGY 5.0 Polaris 路線底下的一個公開 protocol 
 
 目標是讓 AI workflows：
 
-| 方向                                | 意義                                   |
-| --------------------------------- | ------------------------------------ |
-| More structured                   | 任務先編譯，再執行                            |
-| More inspectable                  | Active、blocked、verified 狀態可見         |
-| Less ambiguous                    | 自然語言被轉成執行結構                          |
-| Harder to fake as complete        | 完成宣稱必須尊重驗證狀態                         |
-| Easier to wrap into future skills | TXT protocol 未來可變成 runtime structure |
+| 方向 | 意義 |
+|---|---|
+| More structured | 任務先編譯，再執行 |
+| More inspectable | Active、blocked、verified 狀態可見 |
+| Less ambiguous | 自然語言被轉成執行結構 |
+| Harder to fake as complete | 完成宣稱必須尊重驗證狀態 |
+| Easier to wrap into future skills | TXT protocol 未來可變成 runtime structure，但不是本次 teaser 支援宣稱 |
 
 主 Polaris 頁面：
 
