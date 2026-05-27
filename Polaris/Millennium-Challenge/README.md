@@ -1,18 +1,36 @@
 # Polaris Millennium Challenge Archive
 
-> Legacy public archive for early Millennium Challenge packages under WFGY / Polaris.  
+> Legacy public archive and current public entry point for Millennium Challenge packages under WFGY / Polaris.  
 > This page is preserved for historical continuity.  
-> For the current Seven Millennium Problems public ER track, use the new canonical path below.
+> New readers should use the latest public ER release link below.
 
-## Current Canonical Track
+## Quick Access
 
-The current Millennium Problems track has moved to:
+| What you want | Link |
+| --- | --- |
+| Open the latest public ER release | [2026-05-27 · K60 Lean No-Sorry Public ER Release](./releases/2026-05-27-k60-lean-nosorry-public-er/README.md) |
+| Open all public releases | [Millennium Challenge Public Releases](./releases/README.md) |
+| Download latest public ER ZIP | [Download ZIP](./releases/2026-05-27-k60-lean-nosorry-public-er/Seven_Millennium_Problems_Clay_Strict_Formal_Proof_Complete_Candidate_K60_Lean_NoSorry_Public_Review_20260527.zip) |
+| Return to Polaris Protocol | [Polaris README](../README.md) |
+| Open WFGY repository | [https://github.com/onestardao/WFGY](https://github.com/onestardao/WFGY) |
 
-[Open the Seven Millennium Problems Review Track](../frontier-challenges/millennium-problems/README.md)
+---
+
+## Current Canonical Release
+
+The current public release track is now maintained inside this folder under:
+
+```txt
+Polaris/Millennium-Challenge/releases/
+```
 
 Latest public ER release:
 
-[2026-05-27 · K60 Lean No-Sorry Public ER Release](../frontier-challenges/millennium-problems/releases/2026-05-27-k60-lean-nosorry-public-er/README.md)
+[2026-05-27 · K60 Lean No-Sorry Public ER Release](./releases/2026-05-27-k60-lean-nosorry-public-er/README.md)
+
+Release index:
+
+[Millennium Challenge Public Releases](./releases/README.md)
 
 Main repository:
 
@@ -22,27 +40,24 @@ Main repository:
 
 ## Archive Status
 
-This folder is a legacy archive.
+This folder serves two purposes:
 
-It preserves early public timestamp packages from the previous Polaris Millennium Challenge layout.
+1. It preserves early public timestamp packages from the previous Polaris Millennium Challenge layout.
+2. It now acts as the stable public entry point for the Seven Millennium Problems public ER release archive.
 
-These files are not the latest canonical release.
+The older 2026-05-20 files remain here as historical timestamp records.
 
-The latest public Seven Millennium Problems package is now maintained under:
-
-```txt
-Polaris/frontier-challenges/millennium-problems/releases/
-````
+The newer 2026-05-27 K60 Lean No-Sorry Public ER package should be treated as the current public ER entry point.
 
 ---
 
-## Archived Files
+## Archived Early Files
 
-| File                                    | Archive meaning                            |
-| --------------------------------------- | ------------------------------------------ |
-| `hodge_er_clay_release_20260520.zip`    | Early Hodge challenge package archive      |
-| `poincare_er_clay_release_20260520.zip` | Early Poincare challenge package archive   |
-| `ym_er_clay_release_20260520.zip`       | Early Yang-Mills challenge package archive |
+| File | Archive meaning |
+| --- | --- |
+| `hodge_er_clay_release_20260520.zip` | Early Hodge challenge package archive |
+| `poincare_er_clay_release_20260520.zip` | Early Poincare challenge package archive |
+| `ym_er_clay_release_20260520.zip` | Early Yang-Mills challenge package archive |
 
 These files are preserved as historical public timestamp records.
 
@@ -52,11 +67,11 @@ These files are preserved as historical public timestamp records.
 
 New readers should start here:
 
-[Seven Millennium Problems Review Track](../frontier-challenges/millennium-problems/README.md)
+[2026-05-27 · K60 Lean No-Sorry Public ER Release](./releases/2026-05-27-k60-lean-nosorry-public-er/README.md)
 
-Then open the latest release:
+Then use the release index for version history:
 
-[2026-05-27 · K60 Lean No-Sorry Public ER Release](../frontier-challenges/millennium-problems/releases/2026-05-27-k60-lean-nosorry-public-er/README.md)
+[Millennium Challenge Public Releases](./releases/README.md)
 
 ---
 
@@ -65,4 +80,3 @@ Then open the latest release:
 Official repository:
 
 [https://github.com/onestardao/WFGY](https://github.com/onestardao/WFGY)
-
