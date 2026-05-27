@@ -1,116 +1,68 @@
-# Polaris Millennium Challenge Archive 
+# Polaris Millennium Challenge Archive
 
-> Public timestamp archive for selected Millennium Prize Problem challenge packages under the WFGY / Polaris research direction.
+> Legacy public archive for early Millennium Challenge packages under WFGY / Polaris.  
+> This page is preserved for historical continuity.  
+> For the current Seven Millennium Problems public ER track, use the new canonical path below.
 
-This directory records the first public timestamp layer for three Polaris challenge packages prepared for future external review.
+## Current Canonical Track
 
-The goal of this page is simple:
+The current Millennium Problems track has moved to:
 
-**preserve the research trail, lock the package history, and provide a clean public entry point for later verification.**
+[Open the Seven Millennium Problems Review Track](../frontier-challenges/millennium-problems/README.md)
 
----
+Latest public ER release:
 
-## Archive Index
+[2026-05-27 · K60 Lean No-Sorry Public ER Release](../frontier-challenges/millennium-problems/releases/2026-05-27-k60-lean-nosorry-public-er/README.md)
 
-| Problem | Package | Archive Role | Date |
-|---|---|---:|---:|
-| Yang-Mills Mass Gap | [ym_er_clay_release_20260520.zip](./ym_er_clay_release_20260520.zip) | External-review package | 2026-05-20 |
-| Hodge Conjecture | [hodge_er_clay_release_20260520.zip](./hodge_er_clay_release_20260520.zip) | External-review package | 2026-05-20 |
-| Poincare Conjecture | [poincare_er_clay_release_20260520.zip](./poincare_er_clay_release_20260520.zip) | External-review package | 2026-05-20 |
+Main repository:
 
----
-
-## 01. Yang-Mills Mass Gap
-
-**Package:** [ym_er_clay_release_20260520.zip](./ym_er_clay_release_20260520.zip)
-
-This package contains an external-review archive for the Yang-Mills Mass Gap challenge route.
-
-Included materials cover review notes, strict blocker elevation notes, hardening status, audit verdicts, claim-boundary notes, and a Lean interface file.
-
-**Internal package highlights:**
-
-- `00_ER_README.md`
-- `08_CLAIM_LIMITS_AND_BACKING.md`
-- `11_BLACKFAN_AUDIT_VERDICT.md`
-- `17_CLAY_STRICT_BLOCKER_ELEVATION_NOTE.md`
-- `18_MVP_HARDENING_STATUS_NOTE_20260520.md`
-- `YMTruthRealizabilityER.lean`
-- `YM_ER_STRICT_FINAL_20260520.md`
-- `YM_ER_ULTIMATE_BLACKFAN_AUDIT_20260520.md`
+[https://github.com/onestardao/WFGY](https://github.com/onestardao/WFGY)
 
 ---
 
-## 02. Hodge Conjecture
+## Archive Status
 
-**Package:** [hodge_er_clay_release_20260520.zip](./hodge_er_clay_release_20260520.zip)
+This folder is a legacy archive.
 
-This package contains an external-review archive for the Hodge Conjecture challenge route.
+It preserves early public timestamp packages from the previous Polaris Millennium Challenge layout.
 
-Included materials cover Clay-strict blocker deployment, MVP hardening, manifest-path mapping, phase closure notes, final audit materials, and reviewer-facing strict notes.
+These files are not the latest canonical release.
 
-**Internal package highlights:**
+The latest public Seven Millennium Problems package is now maintained under:
 
-- `HODGE_ClayStrict_Blocker佈署_第01輪_20260520.md`
-- `HODGE_MVP硬化完成_第02輪_20260520.md`
-- `HODGE_Phase3_MVP硬化收斂_第02輪_20260520.md`
-- `HODGE_Manifest路徑映射補丁_V3_20260520.md`
-- `HODGE_ER_STRICT_FINAL_20260520.md`
-- `HODGE_ER_ULTIMATE_BLACKFAN_AUDIT_20260520.md`
+```txt
+Polaris/frontier-challenges/millennium-problems/releases/
+````
 
 ---
 
-## 03. Poincare Conjecture
+## Archived Files
 
-**Package:** [poincare_er_clay_release_20260520.zip](./poincare_er_clay_release_20260520.zip)
+| File                                    | Archive meaning                            |
+| --------------------------------------- | ------------------------------------------ |
+| `hodge_er_clay_release_20260520.zip`    | Early Hodge challenge package archive      |
+| `poincare_er_clay_release_20260520.zip` | Early Poincare challenge package archive   |
+| `ym_er_clay_release_20260520.zip`       | Early Yang-Mills challenge package archive |
 
-This package contains an external-review archive for the Poincare Conjecture challenge route.
-
-Included materials cover strict final notes, blocker patch lists, public clean heavy notes, blackfan audit materials, and Clay-strict speedrun convergence notes.
-
-**Internal package highlights:**
-
-- `Poincare_ClayStrict主Blocker_補丁清單_20260520.md`
-- `Poincare_ER100_V2_100_PUBLIC_CLEAN_HEAVY_20260520.md`
-- `Poincare_ER_STRICT_FINAL_20260520.md`
-- `Poincare_ER_ULTIMATE_BLACKFAN_AUDIT_20260520.md`
-- `Poincare_Round17_世界最狠黑粉終審_20260520.md`
-- `龐加萊_Round18_ClayStrict最大Blocker_Speedrun收斂_20260520.md`
+These files are preserved as historical public timestamp records.
 
 ---
 
-## Purpose
+## Recommended Entry Point
 
-This archive is intended to serve as a public timestamp and research-history checkpoint.
+New readers should start here:
 
-It records:
+[Seven Millennium Problems Review Track](../frontier-challenges/millennium-problems/README.md)
 
-- the package names,
-- the challenge targets,
-- the public archive date,
-- the review-package boundary,
-- and the first repository-level entry point for future verification.
+Then open the latest release:
 
-Future updates may add expanded manifests, reviewer notes, formalization status, verification logs, and additional challenge packages.
+[2026-05-27 · K60 Lean No-Sorry Public ER Release](../frontier-challenges/millennium-problems/releases/2026-05-27-k60-lean-nosorry-public-er/README.md)
 
 ---
 
-## Claim Boundary
+## Repository
 
-These files are preserved as research archives and external-review materials.
+Official repository:
 
-This page does **not** represent official Clay Mathematics Institute acceptance, official prize validation, or final peer-reviewed publication.
+[https://github.com/onestardao/WFGY](https://github.com/onestardao/WFGY)
 
-The current role of this directory is:
-
-**timestamp first, preserve the trail, invite later review.**
-
----
-
-## Repository Context
-
-This archive belongs to the broader WFGY / Polaris research direction.
-
-Polaris studies structure-first reasoning, challenge decomposition, verification boundaries, and staged public evidence release.
-
-This directory is one timestamped checkpoint in that longer research path.
