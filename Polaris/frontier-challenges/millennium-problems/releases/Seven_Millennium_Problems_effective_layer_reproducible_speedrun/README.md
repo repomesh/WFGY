@@ -1,5 +1,7 @@
 # Seven Millennium Problems Effective-Layer Reproducible Speedrun
 
+<img width="1672" height="941" alt="7MP_Speedrun" src="https://github.com/user-attachments/assets/5c963198-8c2d-4da9-af21-fe5d44d9d985" />
+
 This folder contains the public reproducible speedrun package for the Seven Millennium Problems track under WFGY / Polaris.
 
 This release is designed as a compact video-companion and validator package.  
